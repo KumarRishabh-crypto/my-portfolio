@@ -1,0 +1,343 @@
+/* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('/images/360_F_850962670_nVIS7PZGDn1T7QfNIDurMeZau68anRVd.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+    
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 0;
+            width: 100%; /* Increased width of the navigation bar */
+        }
+
+        header ul li {
+            margin: 0 15px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px; /* Button-like padding */
+            background-color: #aeaeae; /* Default button background */
+            border-radius: 5px; /* Rounded corners */
+            transition: all 0.3s ease; /* Smooth hover effect */
+            display: inline-block; /* Makes sure the button behaves like a block element */
+        }
+
+        header ul li a:hover {
+            text-decoration: underline;
+            background-color: #ffd700; /* Hover color (gold) */
+            color: #333; /* Dark text color on hover */
+            transform: scale(1.1); /* Zoom effect */
+        }
+    
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1); /* Slight background overlay */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+    
+        /* Welcome Section */
+        .welcome-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 80%;
+            margin: 5px auto;
+            align-content: center;
+        }
+    
+        .welcome-section h1 {
+            font-size: 3rem;
+            color: #ffd700;
+        }
+    
+        .welcome-section p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+        }
+    
+        /* About Section */
+        .about-container {
+            max-width: 800px;
+            margin: 5px auto; /* Reduced margin */
+            padding: 10px;    /* Add some padding for content spacing */
+            text-align: center;
+        }
+
+        .about-container h1 {
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+
+        .about-container p {
+            font-size: 1.2rem;
+            color: #f0f0f0;
+        }
+
+    
+        /* Skills Section */
+        .skills-section {
+            margin: 50px auto;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+    
+        .skills-section h2 {
+            font-size: 2rem;
+            color: #ffd700;
+        }
+    
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+    
+        .skill {
+            background-color: #ffd700;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+    
+        .skill:hover {
+            transform: scale(1.1);
+        }
+    
+        /* Container for Projects */
+    .project-container {
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .project-container h1{
+        font-size: 2.5rem;
+            color: #ffd700;
+    }
+
+    .projects-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; /* This will wrap projects to the next row on smaller screens */
+        gap: 1px;
+    }
+
+    /* Individual Project */
+    .project {
+        width: 400px;
+        background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+        transform: translateY(-10px);
+    }
+
+    .project img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content h2 {
+        margin: 10px 0;
+        font-size: 1.5em;
+        color: #ffffff;
+    }
+
+    .project-content p {
+        color: #ffffff;
+    }
+
+    .btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 15px;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+    
+        /* Contact Section Styling */
+        #contact {
+            background-color: #1e3c72;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+    
+        .contact-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+    
+        .social-links a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+
+/* Profile Image Hover Zoom */
+.profile-image-container {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.2); /* Zoom in effect on hover */
+    }
+
+    /* Modal Style for Enlarged Image */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .modal img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Lightbox Styling */
+    .lightbox {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lightbox-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    /* Close button */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
