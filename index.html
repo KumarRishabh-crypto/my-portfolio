@@ -1,514 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>
-<style>
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background: url('images/360_F_850962670_nVIS7PZGDn1T7QfNIDurMeZau68anRVd.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
-        }
-    
-        /* Header Styling */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-
-        header ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            padding: 0;
-            width: 100%; /* Increased width of the navigation bar */
-        }
-
-        header ul li {
-            margin: 0 15px;
-        }
-
-        header ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 8px 15px; /* Button-like padding */
-            background-color: #aeaeae; /* Default button background */
-            border-radius: 5px; /* Rounded corners */
-            transition: all 0.3s ease; /* Smooth hover effect */
-            display: inline-block; /* Makes sure the button behaves like a block element */
-        }
-
-        header ul li a:hover {
-            text-decoration: underline;
-            background-color: #ffd700; /* Hover color (gold) */
-            color: #333; /* Dark text color on hover */
-            transform: scale(1.1); /* Zoom effect */
-        }
-    
-        /* Sections */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1); /* Slight background overlay */
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 20px 0;
-        }
-    
-        /* Welcome Section */
-        .welcome-section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 800px;
-            width: 80%;
-            margin: 5px auto;
-            align-content: center;
-        }
-    
-        .welcome-section h1 {
-            font-size: 3rem;
-            color: #ffd700;
-        }
-    
-        .welcome-section p {
-            font-size: 1.2rem;
-            color: #f0f0f0;
-        }
-    
-        /* About Section */
-        .about-container {
-            max-width: 800px;
-            margin: 5px auto; /* Reduced margin */
-            padding: 10px;    /* Add some padding for content spacing */
-            text-align: center;
-        }
-
-        .about-container h1 {
-            font-size: 2.5rem;
-            color: #ffd700;
-        }
-
-        .about-container p {
-            font-size: 1.2rem;
-            color: #f0f0f0;
-        }
-
-    
-        /* Skills Section */
-        .skills-section {
-            margin: 50px auto;
-            max-width: 800px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-        }
-    
-        .skills-section h2 {
-            font-size: 2rem;
-            color: #ffd700;
-        }
-    
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-    
-        .skill {
-            background-color: #ffd700;
-            color: #333;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 20px;
-            transition: transform 0.3s ease;
-        }
-    
-        .skill:hover {
-            transform: scale(1.1);
-        }
-    
-        /* Container for Projects */
-    .project-container {
-        text-align: center;
-        padding: 50px 30px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    .project-container h1{
-        font-size: 2.5rem;
-            color: #ffd700;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: url('images/360_F_850962670_nVIS7PZGDn1T7QfNIDurMeZau68anRVd.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+    }
+
+    header ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+
+    header ul li {
+      margin: 0 15px;
+    }
+
+    header ul li a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 15px;
+      background-color: #aeaeae;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    header ul li a:hover {
+      text-decoration: underline;
+      background-color: #ffd700;
+      color: #333;
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 20px auto;
+      max-width: 1100px;
+    }
+
+    .welcome-section h1 {
+      font-size: 3rem;
+      color: #ffd700;
+    }
+
+    .about-container p,
+    .welcome-section p {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+    }
+
+    .skills-section {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 900px;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .skill {
+      background-color: #ffd700;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.1);
+    }
+
+    .project-container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .project-container h1 {
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 40px;
     }
 
     .projects-wrapper {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap; /* This will wrap projects to the next row on smaller screens */
-        gap: 1px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
     }
 
-    /* Individual Project */
     .project {
-        width: 400px;
-        background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+      width: 100%;
+      max-width: 370px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project:hover {
-        transform: translateY(-10px);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
     .project img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
 
     .project-content {
-        padding: 20px;
+      padding: 20px;
     }
 
     .project-content h2 {
-        margin: 10px 0;
-        font-size: 1.5em;
-        color: #ffffff;
+      font-size: 1.5rem;
+      color: #ffffff;
     }
 
     .project-content p {
-        color: #ffffff;
+      font-size: 0.95rem;
+      color: #f0f0f0;
     }
 
     .btn {
-        background-color: #007BFF;
-        color: white;
-        padding: 10px;
-        text-decoration: none;
-        border-radius: 5px;
-        display: inline-block;
-        margin-top: 15px;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 12px;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
-        background-color: #0056b3;
+      background-color: #0056b3;
     }
-        /* Footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-        }
-    
-        /* Contact Section Styling */
-        #contact {
-            background-color: #1e3c72;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-    
-        .contact-container {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-        }
-    
-        .social-links a {
-            font-size: 20px;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-    
-        .social-links img {
-            width: 30px;
-            height: 30px;
-        }
 
-/* Profile Image Hover Zoom */
-.profile-image-container {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 12px 0;
+      margin-top: auto;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-links img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .profile-image-container {
+      display: inline-block;
+      margin-bottom: 20px;
     }
 
     .profile-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: transform 0.3s ease-in-out;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
     }
 
     .profile-image:hover {
-        transform: scale(1.2); /* Zoom in effect on hover */
+      transform: scale(1.2);
     }
 
-    /* Modal Style for Enlarged Image */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+    @media (max-width: 768px) {
+      .projects-wrapper {
+        gap: 30px;
+      }
 
-    .modal-content {
-        max-width: 90%;
-        max-height: 90%;
-    }
+      .project {
+        max-width: 100%;
+      }
 
-    .modal img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
+      .skills-container {
+        gap: 10px;
+      }
     }
-
-    .modal-close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        color: white;
-        font-size: 30px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    /* Lightbox Styling */
-    .lightbox {
-        display: none; /* Hidden by default */
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .lightbox-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .lightbox-image {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    /* Close button */
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: white;
-        font-size: 30px;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-</style>
+  </style>
+</head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Home Section -->
-    <section id="home" class="welcome-section">
-        <h1>Welcome to My Portfolio</h1>
-        <p>I'm a creative and detail-oriented web developer with a passion for crafting stunning, user-friendly websites. I specialize in designing and developing responsive web applications that bring ideas to life, blending clean code with captivating visuals. Explore my journey, projects, and vision for building a connected world one website at a time.</p>
-    </section>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- About Section -->
-    <section id="about" class="about-container">
-        <h1>About Me</h1>
-        <div class="profile-image-container">
-            <img src="images/2.jpg" alt="Kumar Rishabh" id="profileImage" class="profile-image">
-        </div>
-        <p>
-            I am Kumar Rishabh, a dedicated Data Science and Programming student at IIT Madras, with a unique academic blend of technical and social sciences, holding a Bachelor's degree in Sociology from Veer Bahadur Singh Purvanchal University. 
-            My passion lies at the intersection of technology, data, and creativity. With a solid foundation in <strong>MySQL</strong>, <strong>Data Structure and Algorithms (Python)</strong>, <strong>Java</strong>, and <strong>App Development (JavaScript, MySQL)</strong>, and <strong>Machine Learning</strong>, I thrive on solving complex problems and creating innovative solutions. Beyond coding, I am an enthusiastic litterateur, deeply interested in exploring the art of storytelling through both Hindi poetry and English prose.
-        </p>
-        <p>
-            As a learner who values both analytical thinking and creativity, I aspire to contribute meaningfully to the fields of data science and programming, while leveraging my sociological insights to approach challenges with a unique perspective. 
-            If you're looking for someone who brings technical skills, creativity, and interdisciplinary knowledge to the table, I’d love to connect and collaborate!
-        </p>
-        
-        <p>
-            Outside of work, I enjoy <em>reading</em>, <em>chess</em>, and <em>cricket</em>. 
-            Let's connect to discuss exciting tech ideas.
-        </p>
-        <a href="My Resume.pdf" class="btn">My Resume</a>
-    </section>
-
-    <!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-    <div class="lightbox-content">
-        <span id="closeBtn" class="close-btn">&times;</span>
-        <img id="lightboxImage" class="lightbox-image" alt="Profile Image">
-    </div>
-</div>
-
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <span class="skill"><i class="fab fa-python"></i> Python</span>
-            <span class="skill"><i class="fab fa-js-square"></i> JavaScript</span>
-            <span class="skill"><i class="fab fa-vuejs"></i> Vue.js</span>
-            <span class="skill"><i class="fas fa-flask"></i> Flask</span>
-            <span class="skill"><i class="fas fa-brain"></i> Machine Learning</span>
-            <span class="skill"><i class="fas fa-code"></i> DSA</span>
-            <span class="skill"><i class="fas fa-database"></i> SQL</span>
-            <span class="skill"><i class="fas fa-cogs"></i> Pandas</span>
-            <span class="skill"><i class="fas fa-cogs"></i> NumPy</span>
-            <span class="skill"><i class="fab fa-python"></i> Jinja2</span>
-        </div>
-    </section>
-
-    <!-- Project Section -->
-<section id="projects" class="project-container">
-    <h1>Projects</h1>
-    <div class="projects-wrapper">
-        <div class="project">
-            <img src="images/mad2.jpeg" alt="MAD2 Project ISCEP V2">
-            <div class="project-content">
-                <h2>MAD2 Project ISCEP V2</h2>
-                        <p><strong>Duration:</strong> Oct 2024 - Nov 2024</p>
-                        <p>
-                            Developed MAD 2 ISCEP V2, an advanced web application for influencer engagement and sponsorship coordination.
-                            The platform enables sponsors and influencers to collaborate seamlessly, creating campaigns, making ad requests,
-                            and managing partnerships.
-                        </p>
-                        <p><strong>Tech Stack:</strong> Flask, Jinja2, SQLite, SQLAlchemy, Vue.js, Bootstrap, Celery, Redis, Flask-Login</p>
-                        <a href="https://github.com/KumarRishabh-crypto/MAD2-ISCEP-V2" class="btn">View Project</a>
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/mad1.jpeg" alt="Web Application for Mad1 Course">
-            <div class="project-content">
-                <h2>Web Application for Mad1 Course</h2>
-                        <p><strong>Duration:</strong> Jul 2024 - Sep 2024</p>
-                        <p>
-                            Developed a web application for managing influencer collaborations and sponsorship programs. InflueSync enables
-                            users to register, log in, browse available services, and make requests for campaign participation.
-                        </p>
-                        <p><strong>Tech Stack:</strong> Flask, Jinja2, SQLAlchemy, SQLite, Flask-Login, Bootstrap</p>
-                        <a href="https://github.com/KumarRishabh-crypto/MAD1-ISCEP" class="btn">View Project</a>
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/bdm.jpeg" alt="Capstone Project: Optimizing Data Management" class="project-image">
-            <div class="project-content">
-                <h2>Capstone Project: Optimizing Data Management</h2>
-                <p><strong>Duration:</strong> Jan 2024 - Mar 2024</p>
-                <p>
-                    This project aimed to enhance operational efficiency and drive sustainable business growth for Shiva Enterprises.
-                    Using data-driven analysis, the project identified demand patterns, sales trends, and customer preferences.
-                </p>
-                <p><strong>Skills:</strong> Data Management, Sales Analysis, Inventory Optimization, Python, MS Excel</p>
-                <a href="https://github.com/KumarRishabh-crypto/BDM-CAPSTONE-PROJECT" class="btn">View Project</a>
-            </div>
-        </div>
-         <div class="project">
-            <img src="images/MLP.png" alt="System Threat Forecaster - Machine Learning Model" class="project-image">
-            <div class="project-content">
-                <h2>System Threat Forecaster - Machine Learning Model</h2>
-                <p><strong>Duration:</strong> Jan 2025 - Mar 2025</p>
-                <p>
-                    This contains an end-to-end machine learning pipeline for predicting system threats using advanced ensemble models like XGBoost, AdaBoost, and Gradient Boosting. The final model is a Stacking Classifier that improves performance over individual classifiers.
-                </p>
-                <p><strong>Skills:</strong> Python, XGBoost, Scikit-Learn, Pandas, NumPy</p>
-                <a href="https://github.com/KumarRishabh-crypto/MLP-PROJECT" class="btn">View Project</a>
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/MLP.png" alt="TDS LLM Project" class="project-image">
-            <div class="project-content">
-                <h2>TDS Project 1 – LLM-based Automation Agent</h2>
-                <p><strong>Duration:</strong> Jan 2025 - Mar 2025</p>
-                <p>
-                  This project implements a plain-English task automation agent for DataWorks Solutions using GPT-4o-Mini. The agent interprets tasks, executes multi-step deterministic operations, and securely returns outputs. It is containerized via Docker and supports a CI/CD environment.
-                <p><strong>Skills:</strong> Python, Flask, REST API, GPT-4o-Mini, Prompt Engineering, File Handling, SQLite, Docker, Podman, OpenAI Proxy, JSON Processing, Markdown Parsing, Image Processing, Audio Transcription, Embedding Similarity, Web Scraping, Git, Bash, Security Constraints, Environment Variables, CI/CD Readiness, API Testing, Documentation</p>
-                <a href="https://github.com/KumarRishabh-crypto/TDS-Project1" class="btn">View Project</a>
-            </div>
-        </div>
-    </div>
+<section id="home" class="welcome-section">
+  <h1>Welcome to My Portfolio</h1>
+  <p>I specialize in developing intelligent, full-stack web applications, combining AI capabilities with beautiful user interfaces. Explore my work and connect!</p>
 </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-container">
-        <h1>Contact Me</h1>
-        <p>You can reach out to me through the following platforms:</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/andajikavi/profilecard/?igsh=ZmYxeDN0Z2JlYjl4" target="_blank">
-                <img src="images/instagram.jpeg" alt="Instagram" />
-                Instagram
-            </a>
-            <a href="https://www.linkedin.com/in/kumar-rishabh-59236a249" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn" />
-                LinkedIn
-            </a>
-            <a href="https://github.com/KumarRishabh-crypto" target="_blank">
-                <img src="images/githuhb.png" alt="GitHub" />
-                GitHub
-            </a>
-        </div>
-    </section>
+<section id="about" class="about-container">
+  <h1>About Me</h1>
+  <div class="profile-image-container">
+    <img src="images/2.jpg" alt="Kumar Rishabh" class="profile-image">
+  </div>
+  <p>
+    I'm Kumar Rishabh, a data science student at IIT Madras with a strong foundation in Python, JavaScript, Flask, SQL, and machine learning. I blend technology with creativity and have built full-stack AI-driven applications. Outside of code, I enjoy poetry, cricket, and chess.
+  </p>
+  <a href="My Resume.pdf" class="btn">My Resume</a>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Kumar Rishabh</p>
-    </footer>
+<section class="skills-section">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <span class="skill">Python</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">Vue.js</span>
+    <span class="skill">Flask</span>
+    <span class="skill">REST APIs</span>
+    <span class="skill">Machine Learning</span>
+    <span class="skill">Prompt Engineering</span>
+    <span class="skill">Docker</span>
+    <span class="skill">SQLite</span>
+    <span class="skill">Git</span>
+    <span class="skill">CI/CD</span>
+    <span class="skill">JSON</span>
+  </div>
+</section>
+
+<section id="projects" class="project-container">
+  <h1>Projects</h1>
+  <div class="projects-wrapper">
+    <div class="project">
+      <img src="images/mad2.jpeg" alt="MAD2">
+      <div class="project-content">
+        <h2>MAD2 Project ISCEP V2</h2>
+        <p>Flask, SQLite, Vue.js based influencer engagement platform with ad request automation.</p>
+        <a href="https://github.com/KumarRishabh-crypto/MAD2-ISCEP-V2" class="btn">View Project</a>
+      </div>
+    </div>
+    <div class="project">
+      <img src="images/mad1.jpeg" alt="MAD1">
+      <div class="project-content">
+        <h2>MAD1 InflueSync</h2>
+        <p>User registration and campaign request system using Flask and SQLAlchemy.</p>
+        <a href="https://github.com/KumarRishabh-crypto/MAD1-ISCEP" class="btn">View Project</a>
+      </div>
+    </div>
+    <div class="project">
+      <img src="images/bdm.jpeg" alt="Capstone">
+      <div class="project-content">
+        <h2>BDM Capstone</h2>
+        <p>Business analytics project for demand prediction and inventory optimization using Python.</p>
+        <a href="https://github.com/KumarRishabh-crypto/BDM-CAPSTONE-PROJECT" class="btn">View Project</a>
+      </div>
+    </div>
+    <div class="project">
+      <img src="images/MLP.png" alt="MLP">
+      <div class="project-content">
+        <h2>System Threat Forecaster</h2>
+        <p>End-to-end ML pipeline using XGBoost, AdaBoost, Stacking, NumPy, Pandas.</p>
+        <a href="https://github.com/KumarRishabh-crypto/MLP-PROJECT" class="btn">View Project</a>
+      </div>
+    </div>
+    <div class="project">
+      <img src="images/MLP.png" alt="TDS">
+      <div class="project-content">
+        <h2>TDS Project 1 – LLM Automation Agent</h2>
+        <p>Task automation with GPT-4o, file handling, embeddings, Docker, CI/CD.</p>
+        <a href="https://github.com/KumarRishabh-crypto/TDS-Project1" class="btn">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-container">
+  <h1>Contact Me</h1>
+  <p>Feel free to connect with me!</p>
+  <div class="social-links">
+    <a href="https://www.instagram.com/andajikavi/profilecard/?igsh=ZmYxeDN0Z2JlYjl4" target="_blank">
+      <img src="images/instagram.jpeg" alt="Instagram" /> Instagram
+    </a>
+    <a href="https://www.linkedin.com/in/kumar-rishabh-59236a249" target="_blank">
+      <img src="images/linkedin.png" alt="LinkedIn" /> LinkedIn
+    </a>
+    <a href="https://github.com/KumarRishabh-crypto" target="_blank">
+      <img src="images/githuhb.png" alt="GitHub" /> GitHub
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2024 Kumar Rishabh</p>
+</footer>
 
     <script>
         // Get elements
